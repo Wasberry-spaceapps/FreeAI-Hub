@@ -266,32 +266,305 @@ function renderList(title, tools) {
 
 function renderAbout() {
     contentArea.innerHTML = `
-        <div class="max-w-3xl bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
-            <h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-6">About FreeAI Hub</h1>
-            <div class="prose prose-slate">
-                <p class="text-slate-600 mb-4 leading-relaxed">
-                    The modern internet is infested with "AI Directories" that act as thinly-veiled affiliate marketing funnels. They promote tools with aggressive paywalls, subscription models, and restrictive token limits.
-                </p>
+        <div class="max-w-4xl bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+            <h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-6">🌟 FreeAI Hub: The Ultimate Beginner's Guide to Local & Free AI</h1>
+            
+            <div class="prose prose-slate max-w-none">
                 <p class="text-slate-600 mb-6 leading-relaxed">
-                    <strong>FreeAI Hub</strong> was built with a different philosophy: an elite, meticulously curated wiki of AI tools that are <em>genuinely free</em>. 
+                    Welcome to the official repository for <strong><a href="https://wasberry-spaceapps.github.io/FreeAI-Hub/" class="text-primary hover:underline" target="_blank">FreeAI Hub</a></strong>! 
+                    If you are brand new to the world of Artificial Intelligence and want to learn how to run powerful AI tools <em>for free</em>, on your <em>own computer</em>, without paying for subscriptions — you are in the right place. This guide is written specifically for you, no computer science degree required. Grab a cup of coffee, and let's dive in.
                 </p>
-                
-                <h3 class="text-xl font-bold text-slate-900 mb-3">Our Curation Criteria</h3>
-                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
-                    <li><strong>Open Source & Local:</strong> Software you can download, inspect, and run on your own hardware forever.</li>
-                    <li><strong>Self-Hostable:</strong> Enterprise-grade tools that offer a free self-hosted edition.</li>
-                    <li><strong>Truly Free Web Tools:</strong> Web-based tools with generous, unmetered access and absolutely no mandatory paywalls.</li>
+
+                <hr class="my-8 border-slate-200">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">📖 SECTION 1: Welcome & What This Site Is</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">
+                    <strong>FreeAI Hub</strong> is a curated directory of completely free, open-source, and local AI tools. We built this because the internet is full of "free" AI tools that ask for your credit card after 5 uses. Everything listed on FreeAI Hub is either 100% free to use on the web, or software you download and run yourself.
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">☁️ Cloud AI vs. 💻 Local AI</h3>
+                <p class="text-slate-600 mb-2">Most people know AI through <strong>Cloud AI</strong> tools like ChatGPT, Claude, or Google Gemini. </p>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-4">
+                    <li><strong>How it works:</strong> You type a message, it sends your data to a massive server farm, the server thinks, and sends the answer back.</li>
+                    <li><strong>The Catch:</strong> It costs them money, so they charge you $20/month, put limits on your usage, and read your chats to train future models.</li>
                 </ul>
 
-                <h3 class="text-xl font-bold text-slate-900 mb-3">How to Contribute</h3>
-                <p class="text-slate-600 mb-4 leading-relaxed">
-                    FreeAI Hub is an open project. If you know a tool that meets our strict criteria, you can submit a Pull Request to our GitHub repository. We require clear documentation, no deceptive pricing, and true utility.
-                </p>
+                <p class="text-slate-600 mb-2"><strong>Local AI</strong> is the exact opposite.</p>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>How it works:</strong> You download the AI's "brain" (a file) to your computer. When you talk to it, your own processor does the thinking.</li>
+                    <li><strong>The Magic:</strong> No internet connection required.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">🛡️ Why Local AI Matters</h3>
+                <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>Absolute Privacy:</strong> Your data never leaves your device. You can feed it your personal diary, financial documents, or private code without fear.</li>
+                    <li><strong>No Subscriptions:</strong> It is 100% free forever. No $20/month fees.</li>
+                    <li><strong>No Usage Limits:</strong> Generate 10,000 images or chat for 24 hours straight. The only limit is your electricity bill.</li>
+                    <li><strong>Uncensored & Unfiltered:</strong> Local models do exactly what you tell them to do, without corporate guardrails interrupting you.</li>
+                </ol>
+
+                <hr class="my-8 border-slate-200">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">🧭 SECTION 2: How to Navigate the Site</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">The FreeAI Hub website is designed to be as simple as possible. Here is how to use it:</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Browsing Categories</h3>
+                <p class="text-slate-600 mb-4 leading-relaxed">On the left sidebar (or under the hamburger menu on mobile), you'll see categories like <strong>Text</strong>, <strong>Image Generation</strong>, <strong>Audio</strong>, and <strong>Code</strong>. Click any of these to filter the tools.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Understanding the Badges</h3>
+                <p class="text-slate-600 mb-2">On every tool card, you'll see a small colored badge. Here is what they mean:</p>
+                <ul class="list-none space-y-2 text-slate-600 mb-4">
+                    <li>🟢 <strong>Local:</strong> You need to download and run this on your own PC. (We'll teach you how below!)</li>
+                    <li>🔵 <strong>Free Web / API:</strong> This runs in your browser on someone else's computer, but it is generously free with no hard paywalls.</li>
+                    <li>🟣 <strong>Open Source:</strong> The code that makes the tool work is public. Anyone can inspect it or modify it.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Reading a Tool Card</h3>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-4">
+                    <li><strong>Title:</strong> The exact name of the software.</li>
+                    <li><strong>Description:</strong> A simple, one-sentence summary of what the tool actually does.</li>
+                    <li><strong>Why it rocks:</strong> The main reason we curated it (e.g., "Best for slow computers" or "Insanely realistic voices").</li>
+                    <li><strong>Link:</strong> Click "Visit Website" to go directly to the official download page.</li>
+                </ul>
+
+                <blockquote class="border-l-4 border-primary bg-indigo-50 p-4 rounded-r-md text-slate-700 my-6">
+                    💡 <strong>Tip for Beginners:</strong> Look for tools in the directory described as "1-click install" or "GUI" (Graphical User Interface). Avoid tools that say "CLI" (Command Line Interface) until you feel more comfortable!
+                </blockquote>
+
+                <hr class="my-8 border-slate-200">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">🖥️ SECTION 3: "Can My PC Run This?" — The Complete Hardware Guide</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">Running AI locally requires computing power. The two most important parts of your computer for AI are <strong>RAM</strong> (System Memory) and <strong>VRAM</strong> (Video Memory on your Graphics Card).</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">🧠 System RAM Guide</h3>
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-100 text-slate-700">
+                                <th class="p-3 border border-slate-200">Your RAM</th>
+                                <th class="p-3 border border-slate-200">What You Can Run</th>
+                                <th class="p-3 border border-slate-200">Example Models</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-600">
+                            <tr>
+                                <td class="p-3 border border-slate-200 font-bold">4GB</td>
+                                <td class="p-3 border border-slate-200">Tiny models. They aren't incredibly smart, but they work!</td>
+                                <td class="p-3 border border-slate-200">TinyLlama 1.1B, Phi-3 Mini (Q4), Gemma 2B</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border border-slate-200 font-bold">8GB</td>
+                                <td class="p-3 border border-slate-200"><strong>The Sweet Spot for Beginners.</strong> Good for daily assistants.</td>
+                                <td class="p-3 border border-slate-200">Llama 3 8B (Q4), Mistral 7B, CodeGemma 7B</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-slate-200 font-bold">16GB</td>
+                                <td class="p-3 border border-slate-200"><strong>Comfortable Tier.</strong> Can run smart models while keeping other apps open.</td>
+                                <td class="p-3 border border-slate-200">Llama 3.2 11B, Gemma 9B, Command R (highly compressed)</td>
+                            </tr>
+                            <tr class="bg-slate-50">
+                                <td class="p-3 border border-slate-200 font-bold">32GB</td>
+                                <td class="p-3 border border-slate-200"><strong>Power User.</strong> Capable of running large, incredibly smart models.</td>
+                                <td class="p-3 border border-slate-200">Mixtral 8x7B, WizardCoder 34B, Llama 3 70B (tight fit!)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-slate-200 font-bold">64GB+</td>
+                                <td class="p-3 border border-slate-200"><strong>Enthusiast.</strong> Can run massive enterprise-grade models smoothly.</td>
+                                <td class="p-3 border border-slate-200">Full uncompressed Llama 3 70B, Command R+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">🎮 GPU (Graphics Card) Guide</h3>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>No GPU (CPU Only):</strong> Yes, you can run AI without a graphics card! It will just be a bit slower (like a human typing). Stick to heavily compressed (Q4) models.</li>
+                    <li><strong>Integrated Graphics (Intel UHD / AMD Radeon):</strong> Slightly faster than CPU, but shares system RAM.</li>
+                    <li><strong>Entry NVIDIA (4GB VRAM - GTX 1650, RTX 3050):</strong> Great for generating 1 image at a time, or running small 7B text models at high speeds.</li>
+                    <li><strong>Mid-range NVIDIA (8GB VRAM - RTX 3060, 4060):</strong> The perfect starting point. Runs 8B-13B models beautifully and generates images quickly.</li>
+                    <li><strong>High-end NVIDIA (16GB–24GB VRAM - RTX 4080, 4090):</strong> The absolute dream. Can run complex 34B-70B models at blistering speeds.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">🗜️ What is "Quantization"? (Q4, Q5, Q8)</h3>
+                <p class="text-slate-600 mb-4 leading-relaxed">When you browse for AI models, you will see weird numbers like <code>Q4</code> or <code>Q8</code>. <strong>Quantization is just compression.</strong></p>
+                <p class="text-slate-600 mb-4 leading-relaxed">Think of a raw 4K photograph. It looks amazing, but the file size is 50MB and it takes forever to load. If you compress it to a JPEG, the file size drops to 5MB, it loads instantly, and <em>it still looks 95% identical to the human eye</em>.</p>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>F16 / Unquantized:</strong> The massive, original "4K photo" of the AI.</li>
+                    <li><strong>Q8 (8-bit):</strong> High quality, slightly smaller.</li>
+                    <li><strong>Q5 / Q4 (4-bit):</strong> The ultimate JPEG. Shrinks the AI by 70%, makes it run incredibly fast on normal laptops, and is still 95% as smart. <strong>Always choose Q4 or Q5 if you are a beginner!</strong></li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">💾 Storage Requirements</h3>
+                <p class="text-slate-600 mb-2">AI models are large files. Make sure you have hard drive space!</p>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>1B - 3B Parameters:</strong> ~2GB to 3GB of space.</li>
+                    <li><strong>7B - 8B Parameters:</strong> ~4GB to 6GB of space.</li>
+                    <li><strong>30B+ Parameters:</strong> 20GB+ of space.</li>
+                </ul>
+
+                <hr class="my-8 border-slate-200">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">🚀 SECTION 4: How to Run Models — Step-by-Step Guides</h2>
+                
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Option A: Ollama (Highly Recommended)</h3>
+                <p class="text-slate-600 mb-2">Ollama is a tiny program that runs silently in the background and makes running AI as easy as typing a single sentence.</p>
+                <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>Install:</strong> Go to <a href="https://ollama.com" class="text-primary hover:underline" target="_blank">Ollama.com</a> and download the installer for Windows or Mac. (If on Linux, open terminal and paste: <code>curl -fsSL https://ollama.com/install.sh | sh</code>).</li>
+                    <li><strong>Run:</strong> Open your computer's Terminal (Mac) or Command Prompt (Windows).</li>
+                    <li><strong>Type this command and press Enter:</strong>
+                        <pre class="bg-slate-900 text-slate-50 p-4 rounded-md mt-2 mb-2 overflow-x-auto"><code>ollama run llama3</code></pre>
+                    </li>
+                    <li><strong>Wait:</strong> It will download the model (about 4.7GB). Once done, you can chat with it right there in the black box!</li>
+                    <li><strong>Get a nice interface:</strong> Staring at a terminal is boring. Download <strong>Open WebUI</strong> or <strong>Page Assist</strong> (from the FreeAI Hub directory) to get a beautiful, ChatGPT-like interface that connects automatically to Ollama.</li>
+                </ol>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Option B: LM Studio</h3>
+                <p class="text-slate-600 mb-2">LM Studio is a beautiful desktop app. No terminals required.</p>
+                <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-6">
+                    <li>Download <strong>LM Studio</strong> from our directory.</li>
+                    <li>Open the app. In the search bar at the top, type <code>Llama 3 Instruct</code>.</li>
+                    <li>A list of files will appear on the right. Look for one that says <code>Q4_K_M</code> (remember quantization?) and click <strong>Download</strong>.</li>
+                    <li>Click the "Speech Bubble" icon on the left menu to open the chat window.</li>
+                    <li>At the top of the chat, select your downloaded model from the dropdown menu, and start typing!</li>
+                </ol>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Option C: GPT4All</h3>
+                <p class="text-slate-600 mb-2">The absolute easiest option for total beginners.</p>
+                <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-6">
+                    <li>Download <strong>GPT4All</strong> from our directory.</li>
+                    <li>Install it just like a normal video game or web browser.</li>
+                    <li>Open it. It will immediately show you a list of recommended models. Click download on one.</li>
+                    <li>Start chatting. It handles all the computer hardware stuff invisibly in the background.</li>
+                </ol>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">Option D: Jan.ai</h3>
+                <p class="text-slate-600 mb-2">A gorgeous, open-source alternative to LM Studio.</p>
+                <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-6">
+                    <li>Download <strong>Jan</strong>.</li>
+                    <li>Go to the "Hub" tab (the little grid icon).</li>
+                    <li>Click download on a model (it recommends the best ones for your PC automatically).</li>
+                    <li>Go to the "Thread" tab and say hello.</li>
+                </ol>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">🎨 For Image Generation: ComfyUI & AUTOMATIC1111</h3>
+                <p class="text-slate-600 mb-2">Image generation uses a technology called <strong>Stable Diffusion</strong>. To run it, you need a User Interface (UI).</p>
+                <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>Get the UI:</strong> Download a 1-click installer for <strong>ComfyUI</strong> or <strong>AUTOMATIC1111</strong> (search them on FreeAI Hub). Extract the folder to your desktop and double click the "Run" file.</li>
+                    <li><strong>Get a Model (Checkpoint):</strong> Go to CivitAI.com or Hugging Face. Download a <code>.safetensors</code> file (these are the image AI brains).</li>
+                    <li><strong>Place the File:</strong> Drag that file into the <code>models/Stable-diffusion</code> folder inside your ComfyUI or AUTOMATIC1111 directory.</li>
+                    <li><strong>Refresh & Generate:</strong> Go back to the web browser where your UI opened, select your new model from the dropdown, type "A cute cat in space," and hit Generate!</li>
+                </ol>
+
+                <hr class="my-8 border-slate-200">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">🤗 SECTION 5: Hugging Face — Finding & Downloading Models</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed"><strong>Hugging Face</strong> is the "GitHub of AI." It is a massive, free website where researchers and hobbyists upload their AI models.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">How to Search & Read Model Cards</h3>
+                <p class="text-slate-600 mb-2">When you search for a model (like "Mistral"), you'll click on it and see a <strong>Model Card</strong>. This is just a ReadMe file that tells you:</p>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-4">
+                    <li>What the model is good at.</li>
+                    <li>What <strong>License</strong> it has (e.g., Apache 2.0 means you can do whatever you want with it).</li>
+                    <li>How to format your prompts.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">The Magic of "GGUF"</h3>
+                <p class="text-slate-600 mb-2">If you want to run a model on your laptop, <strong>you must look for models that end in "GGUF".</strong></p>
+                <p class="text-slate-600 mb-2">GGUF is a special file format created so AI can run efficiently on normal consumer CPUs and GPUs, rather than million-dollar supercomputers.</p>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-4">
+                    <li><em>Tip:</em> If you want Llama-3, search Hugging Face for <code>Llama-3-8B-GGUF</code>. (Usually uploaded by a saint named <em>Bartowski</em> or <em>TheBloke</em>).</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">How to Download</h3>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-4">
+                    <li><strong>Browser:</strong> Click the "Files and versions" tab on Hugging Face, find the <code>Q4_K_M.gguf</code> file, and click the little download arrow.</li>
+                    <li><strong>Easier way:</strong> Just use LM Studio's built-in search bar, which searches Hugging Face for you!</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-6 mb-3">🏆 Beginner Starter Pack (Search these names!)</h3>
+                <ul class="list-disc pl-5 space-y-2 text-slate-600 mb-6">
+                    <li><strong>Text / General Chat:</strong> <code>Meta-Llama-3-8B-Instruct.Q4_K_M.gguf</code></li>
+                    <li><strong>Coding:</strong> <code>DeepSeek-Coder-V2-Lite-Instruct</code> or <code>Qwen2.5-Coder</code></li>
+                    <li><strong>Uncensored/Creative Writing:</strong> <code>Dolphin-Mixtral</code></li>
+                    <li><strong>Images:</strong> <code>SDXL 1.0</code> or <code>Flux.1 Schnell</code> (on CivitAI/Hugging Face)</li>
+                    <li><strong>Audio Transcription:</strong> <code>Whisper Large V3</code></li>
+                </ul>
+
+                <hr class="my-8 border-slate-200">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">🛠️ SECTION 6: Troubleshooting Common Beginner Problems</h2>
+
+                <blockquote class="border-l-4 border-amber-400 bg-amber-50 p-4 rounded-r-md text-slate-700 my-4">
+                    ⚠️ <strong>"The model is typing incredibly slowly!"</strong><br>
+                    <strong>Fix:</strong> You downloaded a model that is too big for your PC, or you didn't download a <code>Q4</code> quantized version. Try downloading a smaller model (like a 3B or 7B model) in Q4 format.
+                </blockquote>
+
+                <blockquote class="border-l-4 border-amber-400 bg-amber-50 p-4 rounded-r-md text-slate-700 my-4">
+                    ⚠️ <strong>"My computer crashed / Out of Memory (OOM) error!"</strong><br>
+                    <strong>Fix:</strong> The AI's brain couldn't fit in your RAM. In LM Studio or GPT4All, go to settings and lower the "Context Window" (how much of the past conversation the AI remembers). Lowering it from 8000 to 2000 saves massive amounts of memory.
+                </blockquote>
+
+                <blockquote class="border-l-4 border-amber-400 bg-amber-50 p-4 rounded-r-md text-slate-700 my-4">
+                    ⚠️ <strong>"Where are these massive files hiding on my computer?"</strong><br>
+                    If your hard drive is full, you need to clear out old models:<br>
+                    • <strong>Ollama (Mac):</strong> <code>~/.ollama/models</code><br>
+                    • <strong>Ollama (Windows):</strong> <code>C:\\Users\\YOUR_NAME\\.ollama\\models</code><br>
+                    • <strong>LM Studio:</strong> Look inside <code>~/.cache/lm-studio/models</code>
+                </blockquote>
+
+                <blockquote class="border-l-4 border-amber-400 bg-amber-50 p-4 rounded-r-md text-slate-700 my-4">
+                    ⚠️ <strong>"My fans aren't spinning, I don't think it's using my Graphics Card!"</strong><br>
+                    <strong>Fix:</strong> In LM Studio, look at the right-side panel for "Hardware Settings" and make sure the <strong>GPU Offload</strong> slider is pushed all the way to "Max". In Ollama, GPU offloading happens automatically, but make sure your graphics drivers are up to date!
+                </blockquote>
+
+                <hr class="my-8 border-slate-200">
+
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">📚 SECTION 7: The FreeAI Hub Glossary</h2>
+                <p class="text-slate-600 mb-4 leading-relaxed">AI has a terrible habit of using complicated words for simple concepts. Here is your plain-English translator:</p>
+
+                <ol class="list-decimal pl-5 space-y-2 text-slate-600 mb-8">
+                    <li><strong>LLM (Large Language Model):</strong> A text-based AI (like ChatGPT) that has read millions of books and learned to predict the next logical word in a sentence.</li>
+                    <li><strong>GGUF:</strong> The standard file format for local AI models. It makes models run well on normal home computers.</li>
+                    <li><strong>Quantization:</strong> Compressing an AI model to make it smaller and faster, with almost no loss in smarts. (Usually expressed as Q4, Q5, Q8).</li>
+                    <li><strong>Context Window:</strong> The AI's short-term memory. A context window of 8,000 tokens means it can remember about 6,000 words of your current conversation before it forgets the beginning.</li>
+                    <li><strong>Tokens:</strong> How AI sees words. A token is usually 3/4ths of a word. ("Hamburger" might be split into "Ham", "bur", "ger" — 3 tokens).</li>
+                    <li><strong>Inference:</strong> The actual act of the AI "thinking" and generating a response.</li>
+                    <li><strong>Embedding:</strong> Translating text into numbers so an AI can understand the mathematical relationship between concepts (e.g., King - Man + Woman = Queen).</li>
+                    <li><strong>Multimodal:</strong> An AI that can see images, hear audio, and read text, rather than just text alone.</li>
+                    <li><strong>Fine-tuning:</strong> Taking a general AI (like Llama) and giving it extra training to make it an expert in one specific thing (like coding or medicine).</li>
+                    <li><strong>RAG (Retrieval-Augmented Generation):</strong> Giving the AI a search engine or a PDF to read <em>before</em> it answers your question, so it doesn't hallucinate facts.</li>
+                    <li><strong>API (Application Programming Interface):</strong> A bridge that allows two software programs to talk to each other.</li>
+                    <li><strong>Prompt:</strong> The text/question you type into the AI.</li>
+                    <li><strong>System Prompt:</strong> Invisible, underlying instructions given to the AI (e.g., "You are a helpful pirate, always speak in pirate slang").</li>
+                    <li><strong>Temperature:</strong> Controls the AI's creativity. 0.1 = Robotic and factual. 0.9 = Highly creative and random.</li>
+                    <li><strong>Top-p / Top-k:</strong> Settings next to Temperature that further control how wild or strict the AI's vocabulary choices are.</li>
+                    <li><strong>Parameters:</strong> The "neurons" of the AI. A 7B model has 7 Billion parameters. More parameters = smarter, but slower.</li>
+                    <li><strong>Checkpoint:</strong> The actual file you download for image generation AI (usually ends in <code>.safetensors</code>).</li>
+                    <li><strong>VRAM (Video RAM):</strong> The memory specifically located on your graphics card. Essential for fast AI generation.</li>
+                    <li><strong>CPU Offloading:</strong> When your graphics card is full, the system "offloads" the rest of the AI brain onto your slower main computer processor (CPU) so it doesn't crash.</li>
+                    <li><strong>Vulkan / CUDA / Metal:</strong> The software languages that allow AI to talk to your graphics card. CUDA = NVIDIA. Metal = Apple Mac. Vulkan = AMD/Intel.</li>
+                    <li><strong>Ollama:</strong> A popular, invisible background app that easily runs local AI models.</li>
+                    <li><strong>Hugging Face:</strong> The main website where researchers upload AI models for the public to download.</li>
+                    <li><strong>CivitAI:</strong> A website specifically dedicated to sharing AI models for generating <em>images</em>.</li>
+                    <li><strong>Diffusion Model:</strong> An AI that generates images by starting with TV static (noise) and slowly organizing the static into a picture.</li>
+                    <li><strong>VAE (Variational Autoencoder):</strong> The "eyes" of an image AI. It translates the AI's math into the actual colored pixels you see on screen.</li>
+                    <li><strong>LoRA (Low-Rank Adaptation):</strong> A tiny, lightweight file (like an add-on or a mod) that you attach to a main AI model to teach it a specific character, art style, or behavior without needing to download a whole new massive model.</li>
+                    <li><strong>ComfyUI:</strong> A popular, node-based (connect-the-dots) interface for generating images.</li>
+                    <li><strong>AUTOMATIC1111 (A1111):</strong> A popular, traditional webpage-style interface for generating images.</li>
+                    <li><strong>Open-Source:</strong> Software where the underlying code is free for anyone to look at, modify, and improve.</li>
+                    <li><strong>Hallucination:</strong> When an AI confidently lies or makes up a fake fact because it doesn't know the real answer.</li>
+                    <li><strong>Weights:</strong> Another term for the actual data inside the model file; the numerical values it learned during training.</li>
+                </ol>
+
+                <div class="bg-indigo-50 border border-indigo-100 rounded-lg p-6 text-center">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">🎉 You did it!</h3>
+                    <p class="text-slate-600 mb-4">You now know more about how AI actually works than 99% of the population. Head over to the directory, find a tool that looks cool, and start building your own private AI command center today!</p>
+                    <a href="https://wasberry-spaceapps.github.io/FreeAI-Hub/" class="inline-block bg-primary text-white font-medium px-6 py-2 rounded-md hover:bg-indigo-500 transition-colors">Explore FreeAI Hub</a>
+                </div>
             </div>
         </div>
     `;
 }
-
 // --- Component Generation ---
 
 function generateToolCards(tools) {
